@@ -24,10 +24,8 @@
     <script defer src="script/hero.js"></script>
     <script defer src="script/gridbox.js"></script>
     <script defer src="script/app.js"></script>
+
     <!-- css -->
-    <style>
-      @import url("https://slowfil.es/file?type=css&delay=1000&imported-from-html");
-    </style>
     <link rel="stylesheet" href="styles/index.css" />
     
 
@@ -185,7 +183,17 @@
       </article>
       <article class="gridbox__item">
         <section class="card">
-          <iframe class="card__img" src="https://www.youtube.com/embed/YadeD-_Cm9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe 
+            class="card__img" 
+            rel="preload"
+            fetchpriority = "high"
+            src="https://www.youtube.com/embed/YadeD-_Cm9I" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+
+          </iframe>
         </section>
       </article>
       <article class="gridbox__item">
