@@ -1,23 +1,7 @@
-const images = $('img');
-
-const lazyImageObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const image = entry.target;
-      image.src = image.dataset.src;
-      lazyImageObserver.unobserve(image);
-    }
-  });
-});
-images.each((index, entry) => {
-  lazyImageObserver.observe(entry);
-})
-
 // anti flicker
  const antiflicker = () => {
    document.body.style.visibility = 'hidden';
    window.addEventListener('load', () => {
-     console.log('rxe')
      document.body.removeAttribute('style');
    });
  }
@@ -39,5 +23,3 @@ card.each((index, entry) => {
     cardHeight = entry.offsetHeight;
   } while(maxHeight > cardHeight);
 });
-
-const heroImage = $('.hero__img');
