@@ -9,8 +9,6 @@ const lazyImageObserver = new IntersectionObserver((entries) => {
     }
   });
 });
-
-
 images.each((index, entry) => {
   lazyImageObserver.observe(entry);
 })
