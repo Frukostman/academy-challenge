@@ -1,12 +1,3 @@
-// anti flicker
- const antiflicker = () => {
-   document.body.style.visibility = 'hidden';
-   window.addEventListener('load', () => {
-     document.body.removeAttribute('style');
-   });
- }
- antiflicker()
-
 const card = $('.card');
 
 const newParagraph = document.createElement('p');
@@ -23,3 +14,11 @@ card.each((index, entry) => {
     cardHeight = entry.offsetHeight;
   } while(maxHeight > cardHeight);
 });
+// anti flicker
+ const antiflicker = () => {
+   document.body.style.visibility = 'hidden';
+   window.addEventListener('load', () => {
+     document.body.removeAttribute('style');
+   });
+ }
+ antiflicker()
